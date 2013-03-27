@@ -14,3 +14,13 @@ Usage
 or
 
     ./run-with-proper-encoding.sh
+
+The contents of `run-with-proper-encoding.sh` are:
+
+    #!/bin/bash
+
+    if [ ! -f "TicTacToe$.class" ]; then
+        scalac TicTacToe.scala
+    fi
+
+    scala -Dfile.encoding=UTF-8 TicTacToe

@@ -1,4 +1,7 @@
 #!/bin/bash
 
-scalac TicTacToe.scala
+if [ ! -f "TicTacToe$.class" ]; then
+    scalac TicTacToe.scala
+fi
+
 scala -Dfile.encoding=UTF-8 TicTacToe
